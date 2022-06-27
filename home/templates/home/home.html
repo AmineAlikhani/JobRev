@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+<style type="text/css">
+body{
+ direction:rtl;
+ background-color:#fef9ef;
+ color:black;
+ font-family: 'Iranian Sans', sans-serif;
+}
+
+h1{
+font-family: 'Arial';
+}
+a{
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>راهنمای انتخاب شغل</h1>
+<p>مکان درمیان گذاشتن نظرات درباره ی مشاغل شرکت ها و تخصص های مختلف</p>
+
+<div style="background-color:#78290F;
+color:white;padding:20px;">
+<p> :تخصص ها</p>
+<p>
+{% for f in field %}
+	<a href="detail/f{{ f.name }}" >{{ f.name }}</a> <br>
+{% endfor %}
+</p>  
+</div>
+
+<div style="background-color:#15616D;
+color:white;padding:20px;">
+<p> :مشاغل</p>
+<p>
+{% for j in job %}
+	<a href="detail/j{{j.name}}" >{{ j.name }}</a> <br>
+{% endfor %} 
+</p> 
+</div>
+
+<div style="background-color:#001524 ;color:white;padding:20px;">
+<p>:کارفرمایان</p>
+<p> </p>
+<p>
+{% for c in company %}
+	<a href="c{{ c.name }}" >{{ c.name }}</a>
+{% endfor %}
+</p>
+</div>
+
+<p> </p>
+<p> اگر چیزی که دنبالش می گردید اینجا نیست لطفا اضافه کنید</p>
+<p><a style="color:#78290F" href="add_field">تخصص</a></p>
+<p><a style="color:#15616D" href="add_job" >شغل</a></p>
+	
+</body>
+</html>

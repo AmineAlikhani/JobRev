@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+body{
+ direction:rtl;
+ background-color:#fef9ef;
+ color:black;
+ font-family: 'Iranian Sans', sans-serif;
+}
+h1{
+font-family: 'Arial';
+}
+</style>
+
+<html lang="fa-IR">
+<body>
+
+<div style="background-color:#15616D;
+color:white;padding:20px;">
+<h1>راهنمای انتخاب شغل</h1>
+<p>مکان درمیان گذاشتن نظرات درباره ی مشاغل شرکت ها و تخصص های مختلف</p>
+</div>
+
+<div>
+  <h4>اضافه کردن شغل</h4>
+  <p>لطفا شغل مورد نظر خود را نوشته و درصورت امکان در صفحات بعد جزيیات بیشتر را وارد کنید.</p>
+  
+  <form action="", method=POST> {% csrf_token %}
+  <label for="newـjob">عنوان شغلی</label><br>
+  <input type="text" id="new_job" name="new_job" ><br> 
+  <button type="submit">اضافه کردن</button>
+  </form>  
+</div>
+</body>
+</html>

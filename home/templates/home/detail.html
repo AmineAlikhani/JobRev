@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+body{
+ direction:rtl;
+}
+</style>
+
+<html lang="fa-IR">
+<body>
+
+<h1>راهنمای انتخاب شغل</h1>
+
+<p>مکان درمیان گذاشتن نظرات درباره ی مشاغل شرکت ها و تخصص های مختلف</p>
+
+<div>  
+  <label for="job_rev">نظر و تجربات دیگران</label><br>
+  {% for r in refs %}
+  	{{ r.content }} <br>
+  {% endfor %}
+</div>
+
+<div>
+<p>
+  <form action="", method=POST> {% csrf_token %}
+  <label for="newـrev">نظر شما چیست؟</label><br>
+  <input type="text" size="150" id="new_rev" name="new_rev" ><br> 
+  <button type="submit">Submit</button>
+  </form>  
+</p>
+</div>
+
+</body>
+</html>
